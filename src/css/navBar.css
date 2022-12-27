@@ -1,0 +1,73 @@
+a{
+    text-decoration: none;
+}
+
+.navBar{
+    width: 100%;
+    min-height: 10vh;
+    background-color: #DC3535;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contNombreTienda{
+    width: 45%;
+    margin-left: 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contLinkMenu{
+    width: 45%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.contCarrito{
+    width: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombreTienda{
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.tienda{
+    color: #ff4500;
+    text-shadow: 1px 1px 1px #ffa500;
+    font-weight: bolder;
+}
+
+.rubik{
+    color: #ffa500;
+    text-shadow: 1px 1px 1px #ff4500;
+    font-weight: bold;
+}
+
+.linkMenu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.itemMenu{
+     margin: auto 10px auto 10px;
+     text-align: center;
+}
+
+.itemMenu a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
