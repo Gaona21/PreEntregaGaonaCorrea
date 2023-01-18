@@ -1,5 +1,6 @@
 import React from "react";
-import '../css/itemListContainer.css'
+import '../css/itemListContainer.css';
+import CardList from "./CardList";
 
 function ItemListContainer(props){
     return(
@@ -7,6 +8,8 @@ function ItemListContainer(props){
             <p className="mensaje">
                 {props.mensaje}
             </p>
+
+            <CardList/>
         </div>
     );
 }

@@ -1,0 +1,24 @@
+.card{
+    max-width: 150px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    margin: 5px;
+    border-radius: 10px;
+}
+.contImgProducto{
+    max-width: 150px;
+    border-bottom: 1px solid;
+}
+
+.contImgProducto img{
+    width: 100%;
+}
+
+.contCuerpoCard{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <ItemListContainer
-      mensaje="Estamos trabajando en algo aqui, vuelve mas tarde..."
+      mensaje="Estos son nuestros productos..."
       />
     </div>
   );
