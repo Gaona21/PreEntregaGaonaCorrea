@@ -1,13 +1,16 @@
-import React from "react";
-import Card from "./Card";
-import '../css/cardList.css';
-
 import { useState,useEffect } from "react";
+import { useParams } from "react-router-dom";
+
+import React from "react";
+import ItemList from "./ItemList";
+
+import '../css/cardList.css';
 
 function CardList(){
 
-    const [load,setLoad]=useState(false);
+    const [load,setLoad] = useState(false);
     const [productos,setProductos] = useState([]);
+    const props = useParams();
 
     useEffect(()=>{
         const pedido = fetch("/src/productos.json");
@@ -17,28 +20,21 @@ function CardList(){
             return productos;
         })
         .then((productos)=>{
-            console.log(productos);
             setLoad(true);
-            setProductos(productos);
+            setProductos(props.categoria != undefined ? productos.filter(p=>p.categoria == props.categoria) : productos);
         })
 
         .catch((error)=>{
             console.log(error);
-        })
+        }) 
 
-    },[]);
+    },[props.categoria]);
 
     return(
         <div className="cardList">
-            {productos.map((producto)=>{
-                return(
-                    <Card
-                    url={producto.img}
-                    nombre={producto.nombre}
-                    precio={producto.precio}
-                    />
-                );
-            })}
+            <ItemList
+            listaProducto = { productos }
+            />
         </div>
     );
 }

@@ -1,0 +1,37 @@
+.cardDetalle {
+    width: 100%;
+    margin-top: 50px;
+    min-height: 500px;
+    border: 1px solid;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contImg {
+    width: 45%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contImg img{
+    width: 100%;
+}
+
+.separador {
+    height: 450px;
+    border: 1px solid;
+}
+
+.contCuerpo {
+    width: 45%;
+    height: 450px;
+
+    display: flex;
+    flex-direction: column;
+}

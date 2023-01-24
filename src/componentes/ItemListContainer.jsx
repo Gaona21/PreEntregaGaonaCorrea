@@ -2,11 +2,11 @@ import React from "react";
 import '../css/itemListContainer.css';
 import CardList from "./CardList";
 
-function ItemListContainer(props){
+function ItemListContainer(){
     return(
         <div className="contenedor-item-list">
             <p className="mensaje">
-                {props.mensaje}
+                Estos son nuestros productos...
             </p>
 
             <CardList/>
