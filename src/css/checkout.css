@@ -1,10 +1,26 @@
+.tiket{
+    width: 15%;
+    min-height: 400px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorp{
+    display: flex;
+    font-size: 12px;
+}
+
 .contForm {
-    width: 90%;
     min-height: 80vh;
     margin: auto;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .form {

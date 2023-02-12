@@ -3,7 +3,6 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const contexto = createContext();
 const Provider = contexto.Provider;
 
-//useContextProvider(contexto) => Provider.value;
 export const useCarrito = () => {
     const valorDelContexto = useContext(contexto);
     return valorDelContexto;
