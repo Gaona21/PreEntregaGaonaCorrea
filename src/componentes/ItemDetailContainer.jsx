@@ -3,24 +3,25 @@ import { useParams } from "react-router-dom";
 
 import React from "react";
 import ItemDetail from "./ItemDetail";
+import { db } from "../firebase";
+import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 
 function ItemDetailContainer() {
   const [load, setLoad] = useState(false);
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState({});
   const params = useParams();
 
   useEffect(() => {
-    const pedido = fetch("/src/productos.json");
 
-    pedido.then((res) => {
-      const productos = res.json();
-      return productos;
-    })
-      .then((productos) => {
+    const productosCollection = collection(db, "productos");
+    const referencia = doc(productosCollection, params.id);
+    const pedido = getDoc(referencia);
+
+    pedido
+      .then((respuesta) => {
+        setProductos({...respuesta.data(), id: respuesta.id});
         setLoad(true);
-        setProductos(productos.filter(p => p.id == params.id));
       })
-
       .catch((error) => {
         console.log(error);
       })
@@ -30,7 +31,7 @@ function ItemDetailContainer() {
   return (
     <div className="cardList">
       <ItemDetail
-        producto = {productos}
+        producto={productos}
       />
     </div>
   );

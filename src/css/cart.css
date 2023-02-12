@@ -1,0 +1,116 @@
+.contenedorPadre{
+    width: 90%;
+    min-height: 80vh;
+    margin: 10px auto 10px auto;
+}
+
+.tituloCarrito{
+    width: 70%;
+    margin: 20px auto 20px auto;
+}
+
+.encabezado{
+    width: 70%;
+    margin: 1px auto 1px auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.producto{
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.precioUni{
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.cantidadProd{
+    width: 150px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.btnVaciarCarrito{
+    width: 160px;
+    height: 30px;
+    font-size: 17px;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    background-color: #ffa500;
+}
+
+.btnVaciarCarrito:hover{
+    box-shadow: 1px 1px 10px #ffa500;
+    transition: all 0.2s ease;
+}
+
+.contenedorCardCarrito{
+    width: 70%;
+    margin: auto;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto 20px auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ContImg{
+    width: 100px;
+    height: 100px;
+}
+
+.ContImg img{
+    width: 100%;
+}
+
+.btnEliminar{
+    width: 40px;
+    height: 40px;background: none;
+    border: none;
+}
+
+.btnEliminar:hover{
+    cursor: pointer;
+}
+
+.btnEliminar img{
+    width: 100%;
+}
+
+.btnComprar{
+    color: black;
+    display: inline-block;
+    text-align: center;
+    width: 160px;
+    font-size: 17px;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    background-color: #ffa500;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.btnComprar:hover{
+    box-shadow: 1px 1px 10px #ffa500;
+    transition: all 0.2s ease;
+}
+
+.btnNone{
+    display: none;
+    pointer-events: none; 
+    cursor: default;
+}
+
+.contFinal{
+    width: 70%;
+    margin: auto;
+}
+
+.precioTotal{
+    font-size: 20px;
+    font-weight: bolder;
+}

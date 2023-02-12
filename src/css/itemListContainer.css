@@ -1,6 +1,6 @@
 .contenedor-item-list{
     width: 90%;
-    background-color: #DC3535;
+    min-height: 80vh;
     border-radius: 10px;
     padding: 2.5px;
 

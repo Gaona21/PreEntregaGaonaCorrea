@@ -1,39 +1,48 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import React from "react";
 import ItemList from "./ItemList";
+import { db } from "../firebase";
+import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 
 import '../css/cardList.css';
 
-function CardList(){
+function CardList() {
 
-    const [load,setLoad] = useState(false);
-    const [productos,setProductos] = useState([]);
+    const [load, setLoad] = useState(false);
+    const [productos, setProductos] = useState([]);
     const props = useParams();
 
-    useEffect(()=>{
-        const pedido = fetch("/src/productos.json");
+    useEffect(() => {
+        const productosCollection = collection(db, "productos");
+        let filtro;
+        if(props.categoria){
+             filtro = query(productosCollection,where("categoria","==",props.categoria));
+        }else{
+             filtro = query(productosCollection);
+        }
 
-        pedido.then((res)=>{
-            const productos = res.json();
-            return productos;
-        })
-        .then((productos)=>{
-            setLoad(true);
-            setProductos(props.categoria != undefined ? productos.filter(p=>p.categoria == props.categoria) : productos);
-        })
+        const pedidoAFirestore = getDocs(filtro);
 
-        .catch((error)=>{
-            console.log(error);
-        }) 
+        pedidoAFirestore
+            .then((respuesta) => {
+                const productos = respuesta.docs.map(doc => ({ ...doc.data(), id: doc.id }));
 
-    },[props.categoria]);
+                setLoad(true);
+                setProductos(productos);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
 
-    return(
+    }, [props.categoria]);
+
+    return (
         <div className="cardList">
+            {load ? null : 'Cargando...'}
             <ItemList
-            listaProducto = { productos }
+                listaProducto={productos}
             />
         </div>
     );

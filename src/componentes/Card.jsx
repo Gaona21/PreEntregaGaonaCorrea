@@ -11,7 +11,7 @@ function Card(props){
             <div className="contCuerpoCard">
                 <p className="nombreProducto">{props.nombre}</p>
                 <p className="precioProducto">{props.precio}</p>
-                <Link to={"/item/" + props.id}>ver mas</Link>
+                <Link className="btnDetalle" to={"/item/" + props.id}>ver mas</Link>
             </div>
         </div>
     );

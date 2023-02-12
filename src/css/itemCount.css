@@ -1,0 +1,59 @@
+.contPadre{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contCount{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.btnMas, .btnMenos{
+    width: 25px;
+    height: 25px;
+    background-color: #ffa500;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    margin: 2px;
+}
+
+
+
+.cantidad{
+    width: 25px;
+    height: 25px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    margin: 2px;
+    text-align: center;
+}
+
+.contConfirmar{
+    
+}
+
+.btnConfirmar{
+    width: 160px;
+    height: 30px;
+    font-size: 17px;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    background-color: #ffa500;
+}
+
+.btnConfirmar:hover {
+    box-shadow: 1px 1px 10px #ffa500;
+    transition: all 0.2s ease;
+}
+
+.btnMas:hover {
+    box-shadow: 1px 1px 10px #ffa500;
+    transition: all 0.2s ease;
+}
+
+.btnMenos:hover {
+    box-shadow: 1px 1px 10px #ffa500;
+    transition: all 0.2s ease;
+}

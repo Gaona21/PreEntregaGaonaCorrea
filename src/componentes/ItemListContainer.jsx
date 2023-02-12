@@ -4,9 +4,10 @@ import CardList from "./CardList";
 
 function ItemListContainer(){
     return(
+        
         <div className="contenedor-item-list">
             <p className="mensaje">
-                Estos son nuestros productos...
+                Estos son nuestros productos
             </p>
 
             <CardList/>
