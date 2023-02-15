@@ -9,6 +9,10 @@ El proyecto simula un ecommerce de una tienda de cubos rubik. En la tienda podem
 - **React router dom** (Define las rutas de navegacion).
 - **Firebase** (Base de datos)
 - **Notiflix** (sistema de notificaciones)
+- **React** (Create app)
+- **React router dom** (Define las rutas de navegacion).
+- **Firebase** (Base de datos)
+- **Notiflix** (sistema de notificaciones)
 
 ## Vista previa del sitio web
 
