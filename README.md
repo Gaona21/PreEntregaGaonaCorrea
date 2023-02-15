@@ -5,11 +5,13 @@ El proyecto simula un ecommerce de una tienda de cubos rubik. En la tienda podem
 
 **Tecnologias utilizadas**
 
--**React** (Create app)
--**React router dom** (Define las rutas de navegacion).
--**Firebase** (Base de datos)
--**Notiflix** (sistema de notificaciones)
+- **React** (Create app)
+- **React router dom** (Define las rutas de navegacion).
+- **Firebase** (Base de datos)
+- **Notiflix** (sistema de notificaciones)
 
 ## Vista previa del sitio web
 
-[TiendaRubil](https://pre-entrega-gaona-correa-hrkx0b89p-gaona21.vercel.app/)
+! [alt tag] (./prevista.gif)
+
+[TiendaRubik](https://pre-entrega-gaona-correa-hrkx0b89p-gaona21.vercel.app/)

@@ -4,8 +4,14 @@ import { useCarrito } from "./CustomProvider";
 import { db } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import Notiflix from "notiflix";
 
 function Checkout() {
+    Notiflix.Notify.init({
+        width: '300px',
+        position: 'right-bottom',
+        closeButton: false,
+        });
 
     const valordelProvider = useCarrito();
 
@@ -33,19 +39,28 @@ function Checkout() {
 
     const finalizarCompra = (carrito) => {
 
-        const orden = {
-            usuario: {
-                nombre: nombre,
-                apellido: apellido,
-                email: email,
-                direccion: direccion
+        Notiflix.Confirm.show(
+            'Atención',
+            'Esta por pagar $'+valordelProvider.preciototal+", Quiere confirmar la compra?",
+            'Si',
+            'No',
+            function okCb() {
+                const orden = {
+                    usuario: {
+                        nombre: nombre,
+                        apellido: apellido,
+                        email: email,
+                        direccion: direccion
+                    },
+                    carrito
+                }
+        
+                const pedido = addDoc(coleccionVentas, orden);
+                valordelProvider.setCarrito([]);
+                navigate("/");
+                Notiflix.Notify.success("La compra se realizo con exito.\nGracias por su compra.");
             },
-            carrito
-        }
-
-        const pedido = addDoc(coleccionVentas, orden);
-        valordelProvider.vaciarCarrito();
-        navigate("/");
+        );
     }
 
     return (

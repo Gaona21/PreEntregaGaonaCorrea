@@ -1,8 +1,8 @@
-import React, {useState } from 'react'
-import '../css/itemDetail.css'
-import ItemCount from './ItemCount'
+import React, {useState } from 'react';
+import '../css/itemDetail.css';
+import ItemCount from './ItemCount';
 
-import { useCarrito } from './CustomProvider'
+import { useCarrito } from './CustomProvider';
 
 function ItemDetail(props) {
 

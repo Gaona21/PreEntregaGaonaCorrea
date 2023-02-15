@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import React from "react";
 import ItemDetail from "./ItemDetail";
 import { db } from "../firebase";
-import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import { collection, doc, getDoc} from "firebase/firestore";
+import Notiflix from 'notiflix';
 
 function ItemDetailContainer() {
   const [load, setLoad] = useState(false);
@@ -28,8 +29,15 @@ function ItemDetailContainer() {
 
   }, []);
 
+  Notiflix.Loading.init({
+    backgroundColor: 'rgba(0,0,0,0.9)',
+    svgColor: '#DC3535',
+    clickToClose: false,
+    });
+
   return (
     <div className="cardList">
+      {load ? Notiflix.Loading.remove() : Notiflix.Loading.dots()}
       <ItemDetail
         producto={productos}
       />

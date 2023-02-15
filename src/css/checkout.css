@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 4px 0px 0px 4px;
 }
 
 .contenedorp{
@@ -26,12 +27,13 @@
 .form {
     width: 60%;
     min-height: 400px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 0px 4px 4px 0px;
 
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import '../css/itemCount.css';
 
+
 function ItemCount({ onAdd }) {
 
     const [contador, serContador] = useState(1);
@@ -19,6 +20,7 @@ function ItemCount({ onAdd }) {
 
     const handleConfirmar = () => {
         onAdd(contador);
+
     }
 
     return (
