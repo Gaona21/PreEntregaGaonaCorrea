@@ -12,6 +12,6 @@ El proyecto simula un ecommerce de una tienda de cubos rubik. En la tienda podem
 
 ## Vista previa del sitio web
 
-! [] (https://imageup.me/phc)
+![] (https://imageup.me/phc)
 
 [TiendaRubik](https://pre-entrega-gaona-correa-hrkx0b89p-gaona21.vercel.app/)
