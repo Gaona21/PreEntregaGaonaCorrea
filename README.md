@@ -12,6 +12,6 @@ El proyecto simula un ecommerce de una tienda de cubos rubik. En la tienda podem
 
 ## Vista previa del sitio web
 
-![](./img/prevista/prevista.gif)
+![gif](https://i.postimg.cc/wBdF4j9Z/prevista-tiendarubik-l4-SMCp-L1.gif)
 
 [TiendaRubik](https://pre-entrega-gaona-correa-hrkx0b89p-gaona21.vercel.app/)
